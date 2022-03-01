@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">Privado</h5>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </p>
+    <a class="btn btn-primary" (click)="volverHome()">ir al home</a><br><br>  
+    <a class="btn btn-primary" (click)="irIntranet()">ir a intranet</a>
+
+    <!-- Enviar informacion por URL -->
+    <!-- Despues debemos preparar a donde va llevar la ruta -->
+    <a [routerLink]="['/intranet',id]">{{id}}ir a Home pero con routerLink</a>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<h1>Formulario: </h1><hr>
+
+<!-- Datos para agregar al arreglo -->
+<input type="text" placeholder="Apellido" [(ngModel)] = 'inputNombre'>
+<input type="text" placeholder="Nombre" [(ngModel)] = 'inputApellido'>
+
+<!-- Href solo para ir a otro contenido -->
+<!-- type = 'buttom' -->
+<button type="submit" (click)="agregarPersona()">Agregar</button>
+
+<hr>
+<h1>Personas: </h1>
+
+<!-- Recorremos el arreglo Persona -->
+<div *ngFor="let persona of personas; let i = index">
+       {{i+1}}:  {{persona.nombre}} {{persona.apellido}}
+</div>
+

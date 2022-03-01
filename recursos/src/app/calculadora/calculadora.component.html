@@ -1,0 +1,15 @@
+<h1>Calculadora de Ejemplo</h1>
+<input type="number" [(ngModel)] = 'numberOne'>
+<input type="number" [(ngModel)] = 'numberTwo'><br>
+
+
+
+<!-- ENVIO DATOS -->
+<app-son-calcu
+    [numUno] = 'numberOne'
+    [numDos] = 'numberTwo'
+    (enviarResultado)="asignarRetorno($event)"
+></app-son-calcu>
+
+
+<h1>{{resultado}}</h1>

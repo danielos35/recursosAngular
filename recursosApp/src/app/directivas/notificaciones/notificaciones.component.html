@@ -1,0 +1,107 @@
+<div class="container m-4">
+  <div class="row">
+    <h1>Tipos de ditectivas</h1>
+  </div>
+</div>
+
+<div class="container">
+  <form [formGroup]="formularioReactivo">
+    <div class="row">
+      <div class="col">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="tipoDirectivaIn"
+            value="Componente"
+            (change)="definirDirectiva($event)"
+            checked
+            formControlName="tipoDirectivaIn"
+          />
+          <label class="form-check-label" for="directivas1"> Componente </label>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="tipoDirectivaIn"
+            value="Estructural"
+            (change)="definirDirectiva($event)"
+            formControlName="tipoDirectivaIn"
+          />
+          <label class="form-check-label" for="directivas1">
+            Estructural
+          </label>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="tipoDirectivaIn"
+            value="Atributo"
+            (change)="definirDirectiva($event)"
+            formControlName="tipoDirectivaIn"
+          />
+          <label class="form-check-label" for="directivas1"> Atributo </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container mt-4">
+  <ng-container *ngIf="tipoDeDirectiva == 'Componente'" class="row">
+    <div class="col">
+      <h2>Componente</h2>
+    </div>
+
+    <div>
+      <p>Angular</p>
+      <P>Podemos agregar un decorador (@module, @Component)</P>
+      <p>Personalizadas (Custom)</p>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="tipoDeDirectiva == 'Estructural'" class="row">
+    <div>
+      <h2>Estructural</h2>
+    </div>
+
+    <div>
+      <p>ngIf</p>
+      <p>ngFor</p>
+      <p>ngSwitch</p>
+      <p>ngPlural</p>
+      <p>ngTemplate</p>
+      <p>ngComponentOutlet</p>
+    </div>
+  </ng-container>
+
+  <ng-container
+    *ngIf="tipoDeDirectiva == 'Atributo'"
+    class="row"
+    style="transition: 1.5s"
+  >
+    <h2>Atributo</h2>
+
+    <p>ngModel</p>
+    <p>ngStyle</p>
+    <p>ngClass</p>
+  </ng-container>
+
+  <!-- IF -->
+  <ng-container *ngIf="test; else elOtro">
+    <h1>Hola soy if</h1>
+  </ng-container>
+
+  <!-- Else -->
+  <ng-template #elOtro>
+    <p>Hola soy else</p>
+  </ng-template>
+</div>

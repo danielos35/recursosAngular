@@ -1,0 +1,9 @@
+<!-- Opción 1 -->
+<h2>Opción 1</h2>
+<input type="text" [(ngModel)]="mensaje"> 
+<button (click)="enviarAlPadre()">Enviar al padre</button><br>
+
+<!-- Opcion 2 -->
+<h2>Opción 2</h2>
+<input type="text" #mensajeDos>
+<button (click)="enviarAlPadreDos(mensajeDos.value)">Enviar al padre</button>

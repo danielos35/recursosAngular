@@ -1,0 +1,15 @@
+
+<h1>Eventos</h1><br>
+<p>click</p>
+<button (click)="setWindow()">Boton</button>
+
+<p>Mouseover</p>
+<button (mouseover)="setWindow()">Boton</button><br><br>
+
+
+<!-- Caputar evento -->
+<p>SI</p><input type="radio" name="test" value="Si" (click)="capturarEvento($event)"><br>
+<p>NO</p><input type="radio" name="test" value="No" (click)="capturarEvento($event)"><br>
+<p>{{textoCapturado}}</p>
+
+

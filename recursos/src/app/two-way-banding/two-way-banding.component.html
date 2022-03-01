@@ -1,0 +1,12 @@
+
+
+<!-- HTML -> TS -->
+<h1>EventBinding</h1>
+<input type="text" (input)="cambiarNombre($event)">
+<p>{{nombre}}</p><br>
+
+
+<!-- TWO WAY BINDING -->
+<h1>Two way binding</h1>
+<input type="text" [(ngModel)] = "nombreTWB">
+<p>{{nombreTWB}}</p>

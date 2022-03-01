@@ -1,0 +1,3 @@
+<p>Desde el Padre: {{fromFather}}</p><hr>
+<app-hijito [envio] = 'fromFather' (devolver)="recogerDatosDesdeHijo($event)"></app-hijito>
+<p>Desde el hijo: {{fromHijo}}</p>

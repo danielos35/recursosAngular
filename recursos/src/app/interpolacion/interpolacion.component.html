@@ -1,0 +1,22 @@
+<p>interpolacion works!</p>
+
+<p>Name: {{name}}</p><br>
+<p>Numero: {{num+12}}</p><br>
+<p>Boolean: {{siNo}}</p><br>
+<p>Arreglo: {{arr}}</p><br>
+<p>Objeto: {{objeto}}</p><br>
+<p>Metodo: {{obtenerNumero()}}</p><br>
+<p>Operador ternario {{num == 0?'Holamundo':'ChaoMundo'}}</p>
+
+
+<br><br>
+<!-- Puedo apuntar directamente a un id con interpolación -->
+<input type="text" #empresa> <br>
+<button type="button" (click)="llamarEmpresa(empresa.value)">Ver empresa</button>
+<p>{{empresa.value}}</p>
+
+
+
+<br>
+<input type="text" #repetidor (keyup)="0"><br>
+<p>{{repetidor.value}}</p>

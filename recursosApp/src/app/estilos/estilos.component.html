@@ -1,0 +1,11 @@
+<!-- Podemos usar el operador ternario en una condicion -->
+<label for="">Escribe texto</label><br>
+<input type="text" [(ngModel)] = 'entrada'>
+
+<!-- Podemos colocar una condicion dentro de un ngStyle -->
+<h1 [ngStyle]="{color: entrada =='Daniel'?'red':'blue   '}">{{entrada}}</h1>
+<h1 [ngStyle]="{color: comprobacion?'red':'blue   '}">{{entrada}}</h1>
+
+<!-- Ng Class funciona para traer toda una clase completa directamente desde el css -->
+<h1 [ngClass]="{color:entrada=='test'}">{{entrada}}</h1>
+

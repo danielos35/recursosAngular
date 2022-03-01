@@ -1,0 +1,12 @@
+<h1>Condicion else</h1><br>
+<h2>Escriba contraseña para mostrar mensaje</h2><br>
+<input type="text" [(ngModel)]="status"><br>
+<button (click)="testear()" >Testear</button>
+
+<!-- IF -->
+<p *ngIf="condicional; else noCondicion" >{{mensaje}}</p><br>
+
+<!-- ELSE -->
+<ng-template #noCondicion><p>Contraseña incorrecta</p></ng-template>
+
+

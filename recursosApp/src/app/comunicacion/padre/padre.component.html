@@ -1,0 +1,6 @@
+<!-- Información desde el padre -->
+<label for="">Desde el Padre</label><br>
+<input type="text" [(ngModel)]='mensajero' ><br>
+
+<!-- Dentro del hijo enviamos las variables -->
+<app-hijo [mensaje]="mensajero"></app-hijo>
